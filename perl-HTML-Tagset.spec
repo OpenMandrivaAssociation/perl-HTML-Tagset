@@ -13,6 +13,7 @@ Source:		http://www.cpan.org/authors/id/S/SB/SBURKE/%{module}-%{version}.tar.bz2
 URL:		http://search.cpan.org/dist/%{module}/
 BuildArch:	noarch
 BuildRequires:	perl-devel
+BuildRoot: 	%{_tmppath}/%{name}-buildroot/
 
 %description
 This module contains data tables useful in dealing with HTML.
