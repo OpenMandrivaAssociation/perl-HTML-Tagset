@@ -1,7 +1,7 @@
 %define	module	HTML-Tagset
 %define name	perl-%{module}
-%define	version	3.10
-%define	release	%mkrel 2
+%define	version	3.20
+%define	release	%mkrel 1
 
 Summary: 	This module contains data tables useful in dealing with HTML
 Name: 		%{name}
@@ -9,11 +9,10 @@ Version: 	%{version}
 Release: 	%{release}
 License: 	GPL
 Group: 		Development/Perl
-Source:		http://www.cpan.org/authors/id/S/SB/SBURKE/%{module}-%{version}.tar.bz2
 URL:		http://search.cpan.org/dist/%{module}/
+Source:     http://www.cpan.org/modules/by-module/HTML/%{module}-%{version}.tar.gz
 BuildArch:	noarch
-BuildRequires:	perl-devel
-BuildRoot: 	%{_tmppath}/%{name}-buildroot/
+BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description
 This module contains data tables useful in dealing with HTML.
@@ -30,10 +29,10 @@ make
 make test
 
 %clean 
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 
 %files
