@@ -1,7 +1,7 @@
 %define	module	HTML-Tagset
 %define name	perl-%{module}
 %define	version	3.20
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 
 Summary: 	This module contains data tables useful in dealing with HTML
 Name: 		%{name}
