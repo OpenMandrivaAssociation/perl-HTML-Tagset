@@ -1,25 +1,25 @@
-%define	module	HTML-Tagset
-%define name	perl-%{module}
-%define	version	3.20
-%define	release	%mkrel 3
+%define	upstream_name	 HTML-Tagset
+%define	upstream_version 3.20
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary: 	This module contains data tables useful in dealing with HTML
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
 License: 	GPL
 Group: 		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}/
-Source:     http://www.cpan.org/modules/by-module/HTML/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/HTML/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch:	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module contains data tables useful in dealing with HTML.
 It provides no functions or methods.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -40,5 +40,3 @@ rm -rf %{buildroot}
 %doc README Changes
 %{_mandir}/*/*
 %{perl_vendorlib}/HTML
-
-
