@@ -4,10 +4,10 @@
 Summary:	This module contains data tables useful in dealing with HTML
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	19
+Release:	20
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}/
+Url:		http://metacpan.org/pod/HTML::Tagset
 Source0:	http://www.cpan.org/modules/by-module/HTML/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
@@ -35,4 +35,3 @@ make test
 %doc README Changes
 %{perl_vendorlib}/HTML
 %{_mandir}/man3/*
-
