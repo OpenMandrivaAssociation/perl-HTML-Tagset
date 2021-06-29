@@ -4,7 +4,7 @@
 Summary:	This module contains data tables useful in dealing with HTML
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	20
+Release:	21
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/HTML::Tagset
@@ -19,7 +19,7 @@ This module contains data tables useful in dealing with HTML.
 It provides no functions or methods.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
