@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	24
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/HTML::Tagset
+Url:		https://metacpan.org/pod/HTML::Tagset
 Source0:	http://www.cpan.org/modules/by-module/HTML/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
