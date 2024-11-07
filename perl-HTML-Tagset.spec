@@ -1,14 +1,13 @@
 %define	modname	HTML-Tagset
-%define	modver	3.20
 
 Summary:	This module contains data tables useful in dealing with HTML
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	26
+Version:	3.24
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/HTML::Tagset
-Source0:	http://www.cpan.org/modules/by-module/HTML/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/HTML/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test)
@@ -19,19 +18,19 @@ This module contains data tables useful in dealing with HTML.
 It provides no functions or methods.
 
 %prep
-%autosetup -p1 -n %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
-%doc README Changes
+%doc Changes
 %{perl_vendorlib}/HTML
 %{_mandir}/man3/*
