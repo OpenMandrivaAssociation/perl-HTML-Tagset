@@ -12,6 +12,8 @@ BuildArch:	noarch
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
+# FIXME why doesn't the dependency generator notice this?
+Provides:	perl(HTML::Tagset) = %{version}
 
 %description
 This module contains data tables useful in dealing with HTML.
