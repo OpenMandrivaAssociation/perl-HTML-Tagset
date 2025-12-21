@@ -9,6 +9,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/pod/HTML::Tagset
 Source0:	http://www.cpan.org/modules/by-module/HTML/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
